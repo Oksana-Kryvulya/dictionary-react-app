@@ -5,11 +5,11 @@ export default function Results(props) {
   if (props.results)
     return (
       <div>
-        <p>
+        <h3>
           {props.results.word}
           <br />
-          {props.results.phonetics[0].text}
-        </p>
+          <em className="opacity-50"> {props.results.phonetics[0].text}</em>
+        </h3>
         {props.results.meanings.map(function (meaning, index) {
           return (
             <div key={index}>

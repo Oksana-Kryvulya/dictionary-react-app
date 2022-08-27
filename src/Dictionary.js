@@ -14,8 +14,7 @@ export default function Dictionary() {
 
   function search(event) {
     event.preventDefault();
-    let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
-    alert(`Searching for word ${keyword} defenition`);
+    let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${keyword}`;
     axios.get(apiUrl).then(handleResponse);
   }
 
@@ -27,15 +26,19 @@ export default function Dictionary() {
     <div className="Dictionary">
       <h1>Dictionary</h1>
       <h2>What word do you look up?</h2>
-      <form onSubmit={search}>
-        <input
-          type="search"
-          className="inputKeyWord"
-          onChange={handleKeyWordChange}
-        />
-        <button type="submit" className="btn btn-secondary">
-          Search
-        </button>
+      <form className="row mt-3" onSubmit={search}>
+        <div className="col">
+          <input
+            type="text"
+            className="form-control input-lg"
+            onChange={handleKeyWordChange}
+          />
+        </div>
+        <div className="col">
+          <button type="submit" className="btn btn-secondary">
+            Search
+          </button>
+        </div>
       </form>
       <Results results={results} />
     </div>

@@ -8,7 +8,12 @@ export default function App() {
         <main>
           <Dictionary />
         </main>
-        <footer className="App-footer">Coded by Oksana Kryvulya</footer>
+        <footer className="App-footer mt-3">
+          <a href="https://github.com/Oksana-Kryvulya/dictionary-react-app">
+            Open source code
+          </a>{" "}
+          coded by Oksana Kryvulya
+        </footer>
       </div>
     </div>
   );
