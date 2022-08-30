@@ -11,11 +11,9 @@ export default function Meanings(props) {
         if (index < 4)
           return (
             <div key={index}>
-              <p>
-                <strong>Definition: </strong>
-                {definition.definition}
-                <Example example={definition.example} />
-              </p>
+              <strong>Definition: </strong>
+              {definition.definition}
+              <Example example={definition.example} />
             </div>
           );
         else return null;
