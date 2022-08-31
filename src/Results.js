@@ -5,7 +5,8 @@ import Player from "./Player";
 
 export default function Results(props) {
   console.log(props.results);
-  let audioPlayer = 0;
+  let audioPlayerDisplayed = false;
+  let showAudio = false;
 
   if (props.results)
     return (
@@ -14,20 +15,12 @@ export default function Results(props) {
           {props.results.word}
           <br />
           {props.results.phonetics.map(function (phonetic, index) {
-            if (phonetic.audio && audioPlayer === 0) {
-              console.log("hello");
-              audioPlayer += 1;
-              return (
-                <span key={index}>
-                  <Player audio={phonetic.audio} />
-                </span>
-              );
-            } else return null;
-          })}
-          {props.results.phonetics.map(function (phonetic, index) {
+            showAudio = phonetic.audio && !audioPlayerDisplayed;
+            if (showAudio) audioPlayerDisplayed = true;
             return (
               <span key={index}>
-                <Phonetic phonetic={phonetic} />
+                {showAudio ? <Player audio={phonetic.audio} /> : ""}
+                <Phonetic phonetic={phonetic} />{" "}
               </span>
             );
           })}
