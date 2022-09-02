@@ -33,7 +33,7 @@ export default function Results(props) {
                     <Phonetic text={phonetic.text} />
                   </span>
                 );
-              }
+              } else return null;
             })}
           </h3>
         </section>
