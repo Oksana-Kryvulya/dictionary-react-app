@@ -6,9 +6,9 @@ export default function App() {
     <div className="App">
       <div className="container">
         <main>
-          <Dictionary />
+          <Dictionary keyword="run" />
         </main>
-        <footer className="App-footer mt-3">
+        <footer className="App-footer pb-3 mt-3">
           <a href="https://github.com/Oksana-Kryvulya/dictionary-react-app">
             Open source code
           </a>{" "}

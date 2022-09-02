@@ -1,7 +1,9 @@
+.App {
+  background: rgb(174, 174, 223);
+}
 .App-footer {
   text-align: center;
-  
 }
 .container {
-  max-width: 1000px;
+  max-width: 900px !important;
 }
