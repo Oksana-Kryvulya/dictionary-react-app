@@ -7,7 +7,12 @@ export default function Synonyms(props) {
       <div className="Synonyms">
         <strong>Synonyms: </strong>
         {props.synonyms.map(function (synonym, index) {
-          return <span key={index}>{`${synonym}, `}</span>;
+          return (
+            <span key={index}>
+              {`${synonym}`}
+              {index === props.synonyms.length - 1 ? `` : `, `}
+            </span>
+          );
         })}
       </div>
     );

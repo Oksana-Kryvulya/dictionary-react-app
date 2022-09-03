@@ -9,10 +9,10 @@ export default function App() {
           <Dictionary keyword="run" />
         </main>
         <footer className="App-footer pb-3 mt-3">
+          This project was coded by Oksana Kryvulya and is{" "}
           <a href="https://github.com/Oksana-Kryvulya/dictionary-react-app">
-            Open source code
-          </a>{" "}
-          coded by Oksana Kryvulya
+            open-sourced on GitHub
+          </a>
         </footer>
       </div>
     </div>

@@ -5,7 +5,7 @@ import "./Meanings.css";
 
 export default function Meanings(props) {
   return (
-    <div>
+    <div className="Meanings">
       <h3>{props.meaning.partOfSpeech}</h3>
       {props.meaning.definitions.map(function (definition, index) {
         if (index < 4)
